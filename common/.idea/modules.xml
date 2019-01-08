@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/UTCtest/UTCtest.iml" filepath="$PROJECT_DIR$/UTCtest/UTCtest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AgentLiteDemo/AgentLiteDemo.iml" filepath="$PROJECT_DIR$/AgentLiteDemo/AgentLiteDemo.iml" />
     </modules>
   </component>
 </project>

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/AgentLiteDemo/src/bean/GatewayInfo.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/AgentLiteDemo/src/main/AgentLiteBase.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/AgentLiteDemo/src/main/AgentLiteBind.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/AgentLiteDemo/src/main/AgentLiteDataTrans.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/AgentLiteDemo/src/main/AgentLiteHub.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/AgentLiteDemo/src/main/AgentLiteLogin.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/UTCtest/src/com/vanke/test/Utc.java" charset="UTF-8" />
   </component>
 </project>
