@@ -1,0 +1,233 @@
+18-12-18 17:46:26 BindService INF: register agentLiteBind success, myObserver = main.AgentLiteB***@2626b418myObserverlist.lenth is1
+18-12-18 17:46:26 UGP INF: ucfg id:12 name:1 dir:2 val2:0 10.***.***.126
+18-12-18 17:46:26 UGP INF: ucfg id:8 name:18 dir:2 val2:1 0
+18-12-18 17:46:26 UGP DBG: PSA(0) alloc PID_BIND(1)
+18-12-18 17:46:27 PSA DBG: (0)MSG-SEND:0 to BIND(1)
+18-12-18 17:46:27 BindService INF:  bind msg has been send,msg is : com.huawei.usp.UspMess***@30f39991
+18-12-18 17:46:27 UGP DBG: BIND(1) alloc PID_HTTP(2)
+18-12-18 17:46:27 BIND DBG: (1)MSG-SEND:0 to HTTP(2)
+18-12-18 17:46:27 BIND INF: UBindFsm(1)[0:IDLE] run PSA(0) msg(0:BIND_IOCM) to [WAIT_RSP] ok
+18-12-18 17:46:27 TLS INF: tls method use 3, old 0
+18-12-18 17:46:27 TLS INF: tlslib trustCaFile[./workdir/conf/rootcert.pem] trustCaPath[(null)]
+18-12-18 17:46:27 SCK INF: sock(1) HTTP(2) mode:1 type:4 open 0.*.*.0 :58680
+18-12-18 17:46:27 TLS DBG: tlsssl create <00****001C1669F0> type:1
+18-12-18 17:46:27 SCK INF: sock(1) cretls ret:0
+18-12-18 17:46:27 SCK INF: sock(1) connecting 10.***.***.126 :8943 ret:0 errno:0
+18-12-18 17:46:27 HTTP INF: UHttpFsm(2)[0:IDLE] run BIND(1) msg(0:USER_REQ) to [CONNECTING] ok
+18-12-18 17:46:27 HTTP WRN: (2)MSG-PROC:0 use 468ms for BIND(1)
+18-12-18 17:46:27 SCK INF: sock(1) 10.***.***.126 :8943 preconnect
+18-12-18 17:46:27 SCK DBG: (1)MSG-SEND:0 to HTTP(2)
+18-12-18 17:46:27 HTTP INF: UHttpFsm(2)[1:CONNECTING] run SCK(1) msg(0:TCP_ACK) to [CONNECTING] ok
+18-12-18 17:46:27 TLS DBG: SSL CbVerifyEnd errcode[20:unable to get local issuer certificate] in depth[0].
+18-12-18 17:46:27 TLS DBG: SSL CbVerifyEnd errcode[21:unable to verify the first certificate] in depth[0].
+18-12-18 17:46:27 TLS INF: tlsssl verify result[21].
+18-12-18 17:46:27 TLS INF: tlslib: tlssessionId******************:a2:eb].
+18-12-18 17:46:27 SCK INF: sock(1) 10.***.***.126 :8943 tls connected
+18-12-18 17:46:27 SCK DBG: (1)MSG-SEND:1 to HTTP(2)
+18-12-18 17:46:27 HTTP DBG: (2)MSG-SEND:102 to BIND(1)
+18-12-18 17:46:27 HTTP TRC: send data length 380:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+POST https://10.***.***.126:8943/iocm/dev/reg/v1.1.0/bind HTTP/1.1
+Host: 10.***.***.126:8943
+Accept: */*
+Connection: Keep-Alive
+User-Agent: UGP/2.0
+Content-Type: application/json
+Content-Length: 172
+
+{"verifyCode":********gateway1","deviceInfo":{"nodeId":"huawei_gateway1","manufacturerId":"Huawei","deviceType":"Gateway","model":"AgentLite01","protocolType":"HuaweiM2M"}}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+18-12-18 17:46:27 HTTP INF: UHttpFsm(2)[1:CONNECTING] run SCK(1) msg(1:TCP_CONN) to [CONNECT] ok
+18-12-18 17:46:27 BIND INF: UBindFsm(1)[1:WAIT_RSP] run HTTP(2) msg(102:CONNECT) ignore
+18-12-18 17:46:28 HTTP TRC: recv data length 436:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HTTP/1.1 200 
+Date: Tue, 18 Dec 2018 09:46:28 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Frame-Options: SAMEORIGIN
+X-Application-Context: microservice:dev:20880
+Server: IOT
+
+b8
+{"deviceId":"78********************3-a220384d8fa3","appId":"AU******************fe9ZMGwa","secret":******************50c","addrHAServer":"192.***.*.238","addrLVSServer":"192.***.*.17"}
+0
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+18-12-18 17:46:28 SCK DBG: (1)MSG-SEND:3 to HTTP(2)
+18-12-18 17:46:28 HTTP DBG: (2)MSG-SEND:2 to BIND(1)
+18-12-18 17:46:28 HTTP INF: UHttpFsm(2)[2:CONNECT] run SCK(1) msg(3:TCP_DATA) to [CONNECT] ok
+18-12-18 17:46:28 SCK INF: sock(1) close
+18-12-18 17:46:28 UGP DBG: free PID_HTTP obj(2)
+18-12-18 17:46:28 UGP INF: ucfg id:57 name:2 dir:2 val2:0 ***
+18-12-18 17:46:28 UGP INF: ucfg id:57 name:3 dir:2 val2:0 ***
+18-12-18 17:46:28 UGP INF: ucfg id:57 name:1 dir:2 val2:0 ***
+18-12-18 17:46:28 UGP INF: ucfg id:57 name:4 dir:2 val2:0 192.***.*.238
+18-12-18 17:46:28 UGP INF: ucfg id:49 name:1 dir:2 val2:0 192.***.*.238
+18-12-18 17:46:28 UGP INF: Ugp_AesHexEncData uiEncSize : 113, uiMaxEncSize : 121
+18-12-18 17:46:28 UGP INF: ucfg id:49 name:4 dir:2 val2:0 ***
+18-12-18 17:46:28 UGP INF: ucfg id:45 name:2 dir:2 val2:0 ***
+18-12-18 17:46:28 UGP INF: ucfg id:56 name:1 dir:2 val2:0 ***
+18-12-18 17:46:28 UGP INF: ucfg id:52 name:1 dir:2 val2:0 192.***.*.238
+18-12-18 17:46:28 UGP INF: ucfg id:52 name:6 dir:2 val2:0 ***
+18-12-18 17:46:28 UGP INF: ucfg id:52 name:7 dir:2 val2:0 ***
+18-12-18 17:46:28 BIND DBG: (1)MSG-SEND:100 to PSA(0)
+18-12-18 17:46:28 BIND INF: UBindFsm(1)[1:WAIT_RSP] run HTTP(2) msg(2:MSG_RSP) to [DELETE] ok
+18-12-18 17:46:28 UGP DBG: free PID_BIND obj(1)
+18-12-18 17:46:28 BindService INF: ready to publish bind mes,myObserverlist.lenth is : 1
+18-12-18 17:46:28 BindService INF: notify bind success, myObserver = main.AgentLiteB***@2626b418iotaMsg = com.huawei.iota.util.IotaMess***@c3c9c23
+18-12-18 17:46:28 LoginService INF: register agentLiteLogin success, myObserver = main.AgentLiteLo***@406274a3myObserverlist.lenth is1
+18-12-18 17:46:28 UGP INF: Ugp_AesHexEncData uiEncSize : 113, uiMaxEncSize : 121
+18-12-18 17:46:28 UGP INF: ucfg id:49 name:4 dir:2 val2:0 ***
+18-12-18 17:46:28 UGP INF: ucfg id:57 name:4 dir:2 val2:0 10.***.***.126
+18-12-18 17:46:28 UGP INF: ucfg id:49 name:1 dir:2 val2:0 10.***.***.126
+18-12-18 17:46:28 UGP INF: ucfg id:52 name:1 dir:2 val2:0 10.***.***.126
+18-12-18 17:46:28 UGP DBG: PSA(0) alloc PID_ULOGIN(3)
+18-12-18 17:46:28 UGP DBG: LGN(3) alloc PID_IOCMREG(4)
+18-12-18 17:46:28 PSA DBG: (0)MSG-SEND:0 to LGN(3)
+18-12-18 17:46:28 LoginService INF:  Login msg has been send,msg is : com.huawei.usp.UspMess***@1****148
+18-12-18 17:46:28 LGN DBG: (3)MSG-SEND:102 to PSA(0)
+18-12-18 17:46:28 UGP INF: LGN(3) timer(0x1C13D488) stop
+18-12-18 17:46:28 LGN DBG: (3)MSG-SEND:0 to Iocmreg(4)
+18-12-18 17:46:28 LGN INF: (3)Plugin<IOCMREG> Start wait Type 0
+18-12-18 17:46:28 UGP INF: LGN(3) timer(0x1C13D488:0) start 180000ms
+18-12-18 17:46:28 LGN INF: ULoginFsm(3)[0:IDLE] run PSA(0) msg(0:USER_LOGIN) to [START] ok
+18-12-18 17:46:28 LoginService INF: receive UspLogin msg = 102
+18-12-18 17:46:28 UGP DBG: Iocmreg(4) alloc PID_HTTP(5)
+18-12-18 17:46:28 Iocmreg DBG: (4)MSG-SEND:0 to HTTP(5)
+18-12-18 17:46:28 Iocmreg INF: UIocmregFsm(4)[0:IDLE] run LGN(3) msg(0:LOGIN_REQ) to [CONNECTING] ok
+18-12-18 17:46:28 TLS INF: tls method use 3, old 0
+18-12-18 17:46:28 TLS INF: tls use same ctx.
+18-12-18 17:46:28 SCK INF: sock(2) HTTP(5) mode:1 type:4 open 0.*.*.0 :58681
+18-12-18 17:46:28 TLS DBG: tlsssl create <00****001C197A60> type:1
+18-12-18 17:46:28 SCK INF: sock(2) cretls ret:0
+18-12-18 17:46:28 SCK INF: sock(2) connecting 10.***.***.126 :8943 ret:0 errno:0
+18-12-18 17:46:28 HTTP INF: UHttpFsm(5)[0:IDLE] run Iocmreg(4) msg(0:USER_REQ) to [CONNECTING] ok
+18-12-18 17:46:28 SCK INF: sock(1) delete send:380 recv:436 discard:0 scnt:0 rbuf:0 uerr:0
+18-12-18 17:46:28 TLS DBG: tlsssl delete <00****001C1669F0>.
+18-12-18 17:46:28 SCK INF: sock(1) deltls ret:0
+18-12-18 17:46:28 SCK INF: sock(2) 10.***.***.126 :8943 preconnect
+18-12-18 17:46:28 SCK DBG: (2)MSG-SEND:0 to HTTP(5)
+18-12-18 17:46:28 HTTP INF: UHttpFsm(5)[1:CONNECTING] run SCK(2) msg(0:TCP_ACK) to [CONNECTING] ok
+18-12-18 17:46:28 TLS INF: tlsssl verify result[21].
+18-12-18 17:46:28 TLS INF: tlslib: tlssessionId******************:a2:eb].
+18-12-18 17:46:28 SCK INF: sock(2) 10.***.***.126 :8943 tls connected
+18-12-18 17:46:28 SCK DBG: (2)MSG-SEND:1 to HTTP(5)
+18-12-18 17:46:28 HTTP DBG: (5)MSG-SEND:102 to Iocmreg(4)
+18-12-18 17:46:28 HTTP TRC: send data length 400:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+POST https://10.***.***.126:8943/iocm/dev/sec/v1.1.0/login HTTP/1.1
+Host: 10.***.***.126:8943
+Accept: */*
+MSGHDL: B9E33CE43E8A9E2EB92163F0B39DF9FE
+Connection: Keep-Alive
+User-Agent: Agent1.1
+Content-Type: application/json
+Content-Length: 148
+
+{"appId":"AU******************fe9ZMGwa","deviceId":"78********************3-a220384d8fa3","secret":******************50c","deviceIP":"10.**.**.131"}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+18-12-18 17:46:28 HTTP INF: UHttpFsm(5)[1:CONNECTING] run SCK(2) msg(1:TCP_CONN) to [CONNECT] ok
+18-12-18 17:46:28 Iocmreg INF: UIocmregFsm(4)[1:CONNECTING] run HTTP(5) msg(102:CONNECT) ignore
+18-12-18 17:46:28 HTTP TRC: recv data length 580:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HTTP/1.1 200 
+Date: Tue, 18 Dec 2018 09:46:28 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Frame-Options: SAMEORIGIN
+X-Application-Context: microservice:dev:20880
+Server: IOT
+
+147
+{"accessToken":"ad96******************e-7c99552d7f00","tokenType":"bearer","timeout":"43199","refreshToken":"1bc8******************0-321****757ac","mqttClientId":"********************4-b59b-ae379f7efbb3","addrHAServer":"192.***.*.238","addrLVSServer":"192.***.*.55","redundancyAddrHAServer":null,"redundancyAddrLVSServer":null}
+0
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+18-12-18 17:46:28 SCK DBG: (2)MSG-SEND:3 to HTTP(5)
+18-12-18 17:46:28 HTTP DBG: (5)MSG-SEND:2 to Iocmreg(4)
+18-12-18 17:46:28 HTTP INF: UHttpFsm(5)[2:CONNECT] run SCK(2) msg(3:TCP_DATA) to [CONNECT] ok
+18-12-18 17:46:28 SCK INF: sock(2) close
+18-12-18 17:46:28 UGP DBG: free PID_HTTP obj(5)
+18-12-18 17:46:28 UGP INF: ucfg id:57 name:13 dir:2 val1:34559 
+18-12-18 17:46:28 UGP INF: ucfg id:57 name:12 dir:2 val2:0 ***
+18-12-18 17:46:28 UGP INF: ucfg id:57 name:11 dir:2 val2:0 ***
+18-12-18 17:46:28 UGP INF: ucfg id:57 name:14 dir:2 val2:0 bearer
+18-12-18 17:46:28 UGP INF: ucfg id:49 name:3 dir:2 val2:0 ad96d47b-ac1c-4fe4-bf8e-7c99552d7f00
+18-12-18 17:46:28 UGP INF: ucfg id:45 name:1 dir:2 val2:0 ***
+18-12-18 17:46:28 UGP INF: ucfg id:52 name:4 dir:2 val2:0 ***
+18-12-18 17:46:28 UGP INF: ucfg id:52 name:3 dir:2 val2:0 ***
+18-12-18 17:46:28 Iocmreg INF: [UIocmreg_MsgRsp] Iocmreg Login or refresh Success!
+18-12-18 17:46:28 Iocmreg DBG: (4)MSG-SEND:10 to LGN(3)
+18-12-18 17:46:28 Iocmreg INF: UIocmregFsm(4)[1:CONNECTING] run HTTP(5) msg(2:MSG_RSP) to [ACTIVE] ok
+18-12-18 17:46:28 LGN INF: (3)Plugin<IOCMREG> Filter go
+18-12-18 17:46:28 UGP INF: LGN(3) timer(0x1C13D488) stop
+18-12-18 17:46:28 UGP DBG: LGN(3) alloc PID_MQTA(6)
+18-12-18 17:46:28 LGN DBG: (3)MSG-SEND:0 to MQTA(6)
+18-12-18 17:46:28 LGN INF: (3)Plugin<MQTA> Start wait Type 0
+18-12-18 17:46:28 UGP INF: LGN(3) timer(0x1C13D488:0) start 300000ms
+18-12-18 17:46:28 LGN INF: ULoginFsm(3)[1:START] runfunc Iocmreg msg(10:?) to [START] ok
+18-12-18 17:46:28 UGP DBG: MQTA(6) alloc PID_MQTT(7)
+18-12-18 17:46:28 MQTA DBG: (6)MSG-SEND:0 to MQTT(7)
+18-12-18 17:46:28 MQTA INF: UMqtaFsm(6)[0:IDLE] run LGN(3) msg(0:?) to [CONNECTING] ok
+18-12-18 17:46:28 TLS INF: tls method use 3, old 0
+18-12-18 17:46:28 TLS INF: tls use same ctx.
+18-12-18 17:46:28 SCK INF: sock(3) MQTT(7) mode:1 type:4 open 0.*.*.0 :58682
+18-12-18 17:46:28 MQTT INF: mqtt(7) socket create ok
+18-12-18 17:46:28 TLS DBG: tlsssl create <00****001C1669F0> type:1
+18-12-18 17:46:28 SCK INF: sock(3) cretls ret:0
+18-12-18 17:46:28 SCK INF: sock(3) connecting 10.***.***.126 :8883 ret:0 errno:0
+18-12-18 17:46:28 MQTT INF: mqtt(7) socket connecting ok
+18-12-18 17:46:28 MQTT INF: UMqttFsm(7)[0:IDLE] run MQTA(6) msg(0:?) to [CONNECTING] ok
+18-12-18 17:46:28 SCK INF: sock(2) delete send:400 recv:580 discard:0 scnt:0 rbuf:0 uerr:0
+18-12-18 17:46:28 TLS DBG: tlsssl delete <00****001C197A60>.
+18-12-18 17:46:28 SCK INF: sock(2) deltls ret:0
+18-12-18 17:46:28 SCK INF: sock(3) 10.***.***.126 :8883 preconnect
+18-12-18 17:46:28 TLS DBG: SSL CbVerifyEnd errcode[20:unable to get local issuer certificate] in depth[0].
+18-12-18 17:46:28 TLS DBG: SSL CbVerifyEnd errcode[21:unable to verify the first certificate] in depth[0].
+18-12-18 17:46:28 TLS INF: tlsssl verify result[21].
+18-12-18 17:46:28 TLS INF: tlslib: tlssessionId******************:16:9c].
+18-12-18 17:46:28 SCK INF: sock(3) 10.***.***.126 :8883 tls connected
+18-12-18 17:46:28 SCK DBG: (3)MSG-SEND:0 to MQTT(7)
+18-12-18 17:46:28 MQTT INF: [Sending CONNECT(16)], deviceId=[78b********************-a220384d8fa3], deviceSecret********************0c], mqttClientId=[v********************-b59b-ae379f7efbb3]
+18-12-18 17:46:28 MQTT INF: mqtt[7] socket send MsgType[16] iRet[0]
+18-12-18 17:46:28 MQTT INF: UMqttFsm(7)[1:CONNECTING] run SCK(3) msg(0:?) to [CONNECT] ok
+18-12-18 17:46:28 SCK DBG: (3)MSG-SEND:32 to MQTT(7)
+18-12-18 17:46:28 MQTT INF: mqtt(7) receive CONNACK and connection is accepted.
+18-12-18 17:46:28 MQTT INF: [Sending SUBSCRIBE(128)] mqttTopic=[/gws/78b8********************a220384d8fa3/signaltrans/v2/categories/#]
+18-12-18 17:46:28 MQTT INF: mqtt[7] socket send MsgType[128] iRet[0]
+18-12-18 17:46:28 MQTT INF: [UMqtt_ReportUlogin] subscription of mqtt is ok.
+18-12-18 17:46:28 MQTT DBG: (7)MSG-SEND:0 to MQTA(6)
+18-12-18 17:46:28 MQTT INF: UMqttFsm(7)[2:CONNECT] run SCK(3) msg(32:?) to [CONNECT] ok
+18-12-18 17:46:28 MQTA DBG: (6)MSG-SEND:20 to LGN(3)
+18-12-18 17:46:28 MQTA INF: UMqtaFsm(6)[1:CONNECTING] run MQTT(7) msg(0:?) to [CONNECT] ok
+18-12-18 17:46:28 LGN INF: (3)Plugin<MQTA> Filter go
+18-12-18 17:46:28 UGP INF: LGN(3) timer(0x1C13D488) stop
+18-12-18 17:46:28 LGN DBG: (3)MSG-SEND:100 to PSA(0)
+18-12-18 17:46:28 UGP INF: LGN(3) timer(0x1C13D488) stop
+18-12-18 17:46:28 UGP INF: LGN(3) timer(0x1C13D4E0) stop
+18-12-18 17:46:28 LGN INF: ULoginFsm(3)[1:START] runfunc MQTA msg(20:?) to [CONNECT] ok
+18-12-18 17:46:28 LoginService INF: receive UspLogin msg = 100
+18-12-18 17:46:28 LoginService INF: ready to publish Login mes,myObserverlist.lenth is : 1
+18-12-18 17:46:28 LoginService INF: notify Login success, myObserver = main.AgentLiteLo***@406274a3iotaMsg = com.huawei.iota.util.IotaMess***@442cc860
+18-12-18 17:46:28 SCK DBG: (3)MSG-SEND:144 to MQTT(7)
+18-12-18 17:46:28 MQTT INF: mqtt(7) receive SUBACK
+18-12-18 17:46:28 MQTT INF: UMqttFsm(7)[2:CONNECT] run SCK(3) msg(144:?) to [CONNECT] ok
+18-12-18 17:46:28 SCK DBG: (3)MSG-SEND:208 to MQTT(7)
+18-12-18 17:46:28 MQTT INF: mqtt(7) receive PINGRESP 
+18-12-18 17:46:28 MQTT INF: UMqttFsm(7)[2:CONNECT] run SCK(3) msg(208:?) to [CONNECT] ok
+18-12-18 17:46:56 TMR DBG: (0)MSG-SEND:1 to USP(0)
+18-12-18 17:46:56 UGP INF: AppKeepAlive
+18-12-18 17:46:56 MQTT DBG: (7)MSG-SEND:0 to MQTT(7)
+18-12-18 17:46:56 MQTT INF: mqtt(7) send PINGREQ ok.
+18-12-18 17:46:56 MQTT INF: UMqttFsm(7)[2:CONNECT] run MQTT(7) msg(0:?) to [CONNECT] ok
+18-12-18 17:46:56 SCK DBG: (3)MSG-SEND:208 to MQTT(7)
+18-12-18 17:46:56 MQTT INF: mqtt(7) receive PINGRESP 
+18-12-18 17:46:56 MQTT INF: UMqttFsm(7)[2:CONNECT] run SCK(3) msg(208:?) to [CONNECT] ok
+18-12-18 17:47:28 TMR DBG: (0)MSG-SEND:1 to MQTA(6)
+18-12-18 17:47:28 MQTA INF: UMqtaFsm(6)[2:CONNECT] run TMR(0) msg(1:?) to [CONNECT] ok
+18-12-18 17:48:28 TMR DBG: (0)MSG-SEND:1 to MQTA(6)

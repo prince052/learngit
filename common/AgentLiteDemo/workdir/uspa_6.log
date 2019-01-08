@@ -1,0 +1,123 @@
+18-12-18 16:53:19 BindService INF: register agentLiteBind success, myObserver = main.AgentLiteB***@2626b418myObserverlist.lenth is1
+18-12-18 16:53:19 UGP INF: ucfg id:12 name:1 dir:2 val2:0 10.***.***.126
+18-12-18 16:53:19 UGP INF: ucfg id:8 name:18 dir:2 val2:1 0
+18-12-18 16:53:19 UGP DBG: PSA(0) alloc PID_BIND(1)
+18-12-18 16:53:19 PSA DBG: (0)MSG-SEND:0 to BIND(1)
+18-12-18 16:53:19 BindService INF:  bind msg has been send,msg is : com.huawei.usp.UspMess***@30f39991
+18-12-18 16:53:19 UGP DBG: BIND(1) alloc PID_HTTP(2)
+18-12-18 16:53:19 BIND DBG: (1)MSG-SEND:0 to HTTP(2)
+18-12-18 16:53:19 BIND INF: UBindFsm(1)[0:IDLE] run PSA(0) msg(0:BIND_IOCM) to [WAIT_RSP] ok
+18-12-18 16:53:19 TLS INF: tls method use 3, old 0
+18-12-18 16:53:20 TLS INF: tlslib trustCaFile[./workdir/conf/rootcert.pem] trustCaPath[(null)]
+18-12-18 16:53:20 SCK INF: sock(1) HTTP(2) mode:1 type:4 open 0.*.*.0 :57121
+18-12-18 16:53:20 TLS DBG: tlsssl create <00****001BE78E70> type:1
+18-12-18 16:53:20 SCK INF: sock(1) cretls ret:0
+18-12-18 16:53:20 SCK INF: sock(1) connecting 10.***.***.126 :8943 ret:0 errno:0
+18-12-18 16:53:20 HTTP INF: UHttpFsm(2)[0:IDLE] run BIND(1) msg(0:USER_REQ) to [CONNECTING] ok
+18-12-18 16:53:20 HTTP WRN: (2)MSG-PROC:0 use 578ms for BIND(1)
+18-12-18 16:53:20 SCK INF: sock(1) 10.***.***.126 :8943 preconnect
+18-12-18 16:53:20 SCK DBG: (1)MSG-SEND:0 to HTTP(2)
+18-12-18 16:53:20 HTTP INF: UHttpFsm(2)[1:CONNECTING] run SCK(1) msg(0:TCP_ACK) to [CONNECTING] ok
+18-12-18 16:53:20 TLS DBG: SSL CbVerifyEnd errcode[20:unable to get local issuer certificate] in depth[0].
+18-12-18 16:53:20 TLS DBG: SSL CbVerifyEnd errcode[21:unable to verify the first certificate] in depth[0].
+18-12-18 16:53:20 TLS INF: tlsssl verify result[21].
+18-12-18 16:53:20 TLS INF: tlslib: tlssessionId******************:1f:67].
+18-12-18 16:53:20 SCK INF: sock(1) 10.***.***.126 :8943 tls connected
+18-12-18 16:53:20 SCK DBG: (1)MSG-SEND:1 to HTTP(2)
+18-12-18 16:53:20 HTTP DBG: (2)MSG-SEND:102 to BIND(1)
+18-12-18 16:53:20 HTTP TRC: send data length 378:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+POST https://10.***.***.126:8943/iocm/dev/reg/v1.1.0/bind HTTP/1.1
+Host: 10.***.***.126:8943
+Accept: */*
+Connection: Keep-Alive
+User-Agent: UGP/2.0
+Content-Type: application/json
+Content-Length: 170
+
+{"verifyCode":********gateway","deviceInfo":{"nodeId":"huawei_gateway","manufacturerId":"Huawei","deviceType":"Gateway","model":"AgentLite01","protocolType":"HuaweiM2M"}}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+18-12-18 16:53:20 HTTP INF: UHttpFsm(2)[1:CONNECTING] run SCK(1) msg(1:TCP_CONN) to [CONNECT] ok
+18-12-18 16:53:20 BIND INF: UBindFsm(1)[1:WAIT_RSP] run HTTP(2) msg(102:CONNECT) ignore
+18-12-18 16:53:20 HTTP TRC: recv data length 376:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HTTP/1.1 400 
+Date: Tue, 18 Dec 2018 08:53:20 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Frame-Options: SAMEORIGIN
+X-Application-Context: microservice:dev:20880
+Cache-Control: no-store
+Content-Language: en-US
+Server: IOT
+
+4a
+{"error_code":"100416","error_desc":"The device has already been binded."}
+0
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+18-12-18 16:53:20 SCK DBG: (1)MSG-SEND:3 to HTTP(2)
+18-12-18 16:53:20 HTTP DBG: (2)MSG-SEND:100 to BIND(1)
+18-12-18 16:53:20 HTTP INF: UHttpFsm(2)[2:CONNECT] run SCK(1) msg(3:TCP_DATA) to [IDLE] ok
+18-12-18 16:53:20 SCK INF: sock(1) close
+18-12-18 16:53:20 UGP DBG: free PID_HTTP obj(2)
+18-12-18 16:53:20 BIND INF: UBindFsm(1)[1:WAIT_RSP] run HTTP(2) msg(100:NTY_ERR) to [RETRY] ok
+18-12-18 16:53:20 SCK INF: sock(1) delete send:378 recv:376 discard:0 scnt:0 rbuf:0 uerr:0
+18-12-18 16:53:20 TLS DBG: tlsssl delete <00****001BE78E70>.
+18-12-18 16:53:20 SCK INF: sock(1) deltls ret:0
+18-12-18 16:53:49 TMR DBG: (0)MSG-SEND:1 to USP(0)
+18-12-18 16:53:49 UGP INF: AppKeepAlive
+18-12-18 16:53:50 TMR DBG: (0)MSG-SEND:0 to BIND(1)
+18-12-18 16:53:50 UGP DBG: BIND(1) alloc PID_HTTP(3)
+18-12-18 16:53:50 BIND DBG: (1)MSG-SEND:0 to HTTP(3)
+18-12-18 16:53:50 BIND INF: UBindFsm(1)[2:RETRY] run TMR(0) msg(0:RETRY) to [WAIT_RSP] ok
+18-12-18 16:53:50 TLS INF: tls method use 3, old 0
+18-12-18 16:53:50 TLS INF: tls use same ctx.
+18-12-18 16:53:50 SCK INF: sock(2) HTTP(3) mode:1 type:4 open 0.*.*.0 :57135
+18-12-18 16:53:50 TLS DBG: tlsssl create <00****001BE78E70> type:1
+18-12-18 16:53:50 SCK INF: sock(2) cretls ret:0
+18-12-18 16:53:50 SCK INF: sock(2) connecting 10.***.***.126 :8943 ret:0 errno:0
+18-12-18 16:53:50 HTTP INF: UHttpFsm(3)[0:IDLE] run BIND(1) msg(0:USER_REQ) to [CONNECTING] ok
+18-12-18 16:53:50 SCK INF: sock(2) 10.***.***.126 :8943 preconnect
+18-12-18 16:53:50 SCK DBG: (2)MSG-SEND:0 to HTTP(3)
+18-12-18 16:53:50 HTTP INF: UHttpFsm(3)[1:CONNECTING] run SCK(2) msg(0:TCP_ACK) to [CONNECTING] ok
+18-12-18 16:53:50 TLS INF: tlsssl verify result[21].
+18-12-18 16:53:50 TLS INF: tlslib: tlssessionId******************:1f:67].
+18-12-18 16:53:50 SCK INF: sock(2) 10.***.***.126 :8943 tls connected
+18-12-18 16:53:50 SCK DBG: (2)MSG-SEND:1 to HTTP(3)
+18-12-18 16:53:50 HTTP DBG: (3)MSG-SEND:102 to BIND(1)
+18-12-18 16:53:50 HTTP TRC: send data length 378:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+POST https://10.***.***.126:8943/iocm/dev/reg/v1.1.0/bind HTTP/1.1
+Host: 10.***.***.126:8943
+Accept: */*
+Connection: Keep-Alive
+User-Agent: UGP/2.0
+Content-Type: application/json
+Content-Length: 170
+
+{"verifyCode":********gateway","deviceInfo":{"nodeId":"huawei_gateway","manufacturerId":"Huawei","deviceType":"Gateway","model":"AgentLite01","protocolType":"HuaweiM2M"}}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+18-12-18 16:53:50 HTTP INF: UHttpFsm(3)[1:CONNECTING] run SCK(2) msg(1:TCP_CONN) to [CONNECT] ok
+18-12-18 16:53:50 BIND INF: UBindFsm(1)[1:WAIT_RSP] run HTTP(3) msg(102:CONNECT) ignore
+18-12-18 16:53:50 HTTP TRC: recv data length 376:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HTTP/1.1 400 
+Date: Tue, 18 Dec 2018 08:53:50 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Frame-Options: SAMEORIGIN
+X-Application-Context: microservice:dev:20880
+Cache-Control: no-store
+Content-Language: en-US
+Server: IOT
+
+4a
+{"error_code":"100416","error_desc":"The device has already been binded."}
+0
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
